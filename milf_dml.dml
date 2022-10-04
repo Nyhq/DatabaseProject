@@ -1,0 +1,208 @@
+--Insert statements for burger_shack
+
+INSERT INTO burger_shack (address, phone_number, "UID")
+VALUES('123, Brokey No Workey Street, Ducky Wuck', '0812245647', '0123456');
+
+INSERT INTO burger_shack (address, phone_number, "UID")
+VALUES('69, Oppsie Poopsie avenue,Ballymun', '0821183453', '0934758');
+
+INSERT INTO burger_shack (address, phone_number, "UID")
+VALUES('34, Seans House, Seans Street', '0827832345', '0928349');
+
+INSERT INTO burger_shack (address, phone_number, "UID")
+VALUES('43, Keiths House, Keits Road', '0823457684', '9432576');
+
+INSERT INTO burger_shack (address, phone_number, "UID")
+VALUES('64, Zoo Lane, Dublin Zoo', '0823658594', '9283056');
+
+INSERT INTO burger_shack (address, phone_number, "UID")
+VALUES('856, Computer,Science', '0847438475', '6492835');
+
+INSERT INTO burger_shack (address, phone_number, "UID")
+VALUES('420, Dawids Sock, Smoke alarm', '0834568594', '9830285');
+
+
+--Insert statements for Table
+INSERT INTO "Table" (type, location, "UID", burger_shack_uid)
+VALUES('4', '0', '3647589' ,'0123456');
+
+INSERT INTO "Table" (type, location, "UID", burger_shack_uid)
+VALUES('2', '0', '6578409' ,'0934758');
+
+INSERT INTO "Table" (type, location, "UID", burger_shack_uid)
+VALUES('2', '1', '3627849' ,'6492835');
+
+INSERT INTO "Table" (type, location, "UID", burger_shack_uid)
+VALUES('2', '0', '4673849' ,'6492835');
+
+INSERT INTO "Table" (type, location, "UID", burger_shack_uid)
+VALUES('8', '1', '8594093' ,'6492835');
+
+INSERT INTO "Table" (type, location, "UID", burger_shack_uid)
+VALUES('8', '1', '6439827' ,'0123456');
+
+INSERT INTO "Table" (type, location, "UID", burger_shack_uid)
+VALUES('6', '0', '3690654' ,'0934758');
+
+--Insert statements for Staff
+INSERT INTO staff(name, address, phone_number, staff_email, dob, start_date, "UID", burger_shack_uid)
+VALUES('Dawid Jurek','Dawid’s Aparentment','0843745478','PolonezIsGod@burgershack.com','21-JAN-2001','23-NOV-2021;','9467483','0928349');
+
+INSERT INTO staff(name, address, phone_number, staff_email, dob, start_date, "UID", burger_shack_uid)
+VALUES('Juliet Mullarney','Somewhere,RathMines','0832345467','JermaBeSus@burgershack.com','13-OCT-2001','13-NOV-2021','6547837','0934758');
+
+INSERT INTO staff(name, address, phone_number, staff_email, dob, start_date, "UID", burger_shack_uid)
+VALUES('Ryan Deguara','123 BurnedAsh, Ashy Fire','0842658475','BabyYodaisLife@burgershack.com','03-APR-2003','24-APR-2021','6547584','9830285');
+
+INSERT INTO staff(name, address, phone_number, staff_email, dob, start_date, "UID", burger_shack_uid)
+VALUES('Ronald Liquit','27 Bothar Bui','083264748','HarryPotter4Life@burgershack.com','01-JUN-2001','25-NOV-2021','7583467','9283056');
+
+INSERT INTO staff(name, address, phone_number, staff_email, dob, start_date, "UID", burger_shack_uid)
+VALUES('Nathan Flanagan','28 VoiceActorLane, Europe','085754784','OhGoshOhFrick@burgershack.com','11-APR-2001','01-JAN-2022','4657483','9283056');
+
+INSERT INTO staff(name, address, phone_number, staff_email, dob, start_date, "UID", burger_shack_uid)
+VALUES('Sadhbh Gowran','123 fake street, fake avenue','0843256574','Idontfinknow@burgershack.com','01-JAN-2000','02-JAN-2022','4567487','9830285');
+
+INSERT INTO staff(name, address, phone_number, staff_email, dob, start_date, "UID", burger_shack_uid)
+VALUES('Dominika Adamczewska','Tallaght','0824657594','SillyGirlboss@burgershack.com','30-JAN-2001','23-NOV-2021','7584675','9830285');
+
+--Insert statements for booking
+
+INSERT INTO booking (booking_time, number_of_people, "UID", staff_uid, duration)
+VALUES('8:15', '4', '8547390', '9467483', '60');
+
+INSERT INTO booking (booking_time, number_of_people, "UID", staff_uid, duration)
+VALUES('8:16', '2', '8473902', '6547837', '70');
+
+INSERT INTO booking (booking_time, number_of_people, "UID", staff_uid, duration)
+VALUES('18:00', '2', '6457839', '7583467', '45');
+
+INSERT INTO booking (booking_time, number_of_people, "UID", staff_uid, duration)
+VALUES('00:00', '2', '7389320', '4657483', '15');
+
+INSERT INTO booking (booking_time, number_of_people, "UID", staff_uid, duration) --Test Case for constraint violation
+VALUES('16:30', '6', '9834679', '7584675', '125');
+
+INSERT INTO booking (booking_time, number_of_people, "UID", staff_uid, duration)
+VALUES('20:20', '6', '6483987', '4567487', '55');
+
+INSERT INTO booking (booking_time, number_of_people, "UID", staff_uid, duration)
+VALUES('15:45', '6', '6574830', '4567487', '25');
+
+--Insert statements for Customer
+
+INSERT INTO customer(name, address, cust_email, age, "UID", booking_uid)
+VALUES('Bamba','4325 Michigan Avenue','Bamba@mo.com','22','571058','6457839');
+
+INSERT INTO customer(name, address, cust_email, age, "UID", booking_uid)
+VALUES('Joe Biden','WhiteHouse','joe_biden@presidentusa.us','87','0000001','7389320');
+
+INSERT INTO customer(name, address, cust_email, age, "UID", booking_uid)
+VALUES('Keith','Central Quad, Dublin','Keith@mail.com','21','1000000','8547390');
+
+INSERT INTO customer(name, address, cust_email, age, "UID", booking_uid)
+VALUES('Travis Scott','Astro World,Texas','test@hotmail.com','30','1829408','9834679');
+
+INSERT INTO customer(name, address, cust_email, age, "UID", booking_uid)
+VALUES('Jimin','BTS HQ, Seoul','Keithissoepic@gmail.com','26','1784730','6574830');
+
+INSERT INTO customer(name, address, cust_email, age, "UID", booking_uid)
+VALUES('DIO','Cairo,Egypt','ZaWarudo@Yahoo.com','999','1234567','6457839');
+
+INSERT INTO customer(name, address, cust_email, age, "UID", booking_uid)
+VALUES('Ryan Deguara','123 BurnedAsh, Ashy Fire','BabyYodaisLife@hotmail.com','18','3759334','6483987');
+
+--Insert statements for Party
+INSERT INTO party(name, email, phone_number, "UID", customer_uid)
+VALUES('V','V@bts.com','0863555863','996635 ','1784730');
+
+INSERT INTO party(name, email, phone_number, "UID", customer_uid)
+VALUES('Jungkook','Jungkook@bts.com','0863555864','722000','1784730');
+
+INSERT INTO party(name, email, phone_number, "UID", customer_uid)
+VALUES('Jin','Jin@bts.com','0863555865','511180 ','1784730');
+
+INSERT INTO party(name, email, phone_number, "UID", customer_uid)
+VALUES('Suga','Suga@bts.com','0863555866','106872 ','1784730');
+
+INSERT INTO party(name, email, phone_number, "UID", customer_uid)
+VALUES('RM','Rm@bts.com','0863555867','998744 ','1784730');
+
+INSERT INTO party(name, email, phone_number, "UID",  customer_uid)
+VALUES('Obama','Obama@care.com','0863555868','007628 ','0000001');
+
+INSERT INTO party(name, email, phone_number, "UID", customer_uid)
+VALUES('Mo','mo@bamba.com','0863555869','880243 ','571058');
+
+--Test select statements
+
+SELECT * FROM burger_shack;
+SELECT * FROM "Table";
+SELECT * FROM staff;
+SELECT * FROM booking;
+SELECT * FROM customer;
+SELECT * FROM party;
+
+--Conditional insert for the fine variable
+UPDATE booking
+SET fine = (duration-120)*5
+WHERE duration IN (SELECT duration from booking WHERE duration > 120);
+SELECT customer.name, booking.fine
+FROM customer
+LEFT OUTER JOIN booking on customer.booking_uid = booking."UID"
+WHERE fine > 0;
+--Right Outer Join example
+
+SELECT customer.name, booking.booking_time
+FROM customer
+RIGHT OUTER JOIN booking ON customer.booking_uid = booking."UID" ;
+
+--Inner join example
+SELECT burger_shack.address, COUNT("Table".burger_shack_uid) AS NumberOFTable
+FROM burger_shack
+FULL OUTER JOIN "Table" ON burger_shack."UID" = "Table".burger_shack_uid
+GROUP BY burger_shack.address
+ORDER BY burger_shack.address;
+
+--Left Outer join example
+
+SELECT Staff.name, burger_shack.address
+From Staff
+LEFT OUTER JOIN burger_shack ON staff.burger_shack_uid = burger_shack."UID"
+ORDER BY staff.name;
+
+--Union example
+
+SELECT customer.name
+FROM customer
+
+UNION
+
+SELECT staff.name
+FROM staff;
+
+
+
+--Intersect example
+SELECT party.name, customer.cust_email
+FROM party
+LEFT OUTER JOIN customer
+On customer."UID" = party.customer_uid;
+
+INTERSECT
+
+SELECT party.name, customer.cust_email
+FROM customer
+RIGHT OUTER JOIN PARTY
+ON customer."UID" = party.customer_uid
+WHERE customer."UID" = '1784730';
+
+
+--View example
+CREATE VIEW Booking_Times AS
+    SELECT customer.name, booking.booking_time
+    FROM customer
+    RIGHT OUTER JOIN booking ON customer.booking_uid = booking."UID"
+    WHERE booking.duration < 120;
+
+SELECT * FROM Booking_Times;
